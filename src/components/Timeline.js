@@ -36,7 +36,7 @@ export default function Timeline() {
 
   return (
     <Section style={{ background: theme.background, flexDirection: "column", position: "relative" }}>
-      <Subheading style={{ color: theme.text, marginBottom: "2rem" }}>Timeline</Subheading>
+      <Subheading style={{ color: theme.title, marginBottom: "2rem" }}>Timeline</Subheading>
       <div style={{ display: "flex", flexDirection: "column", gap: "2rem", position: "relative" }}>
         <Line />
         {timeline.map((item, index) => (

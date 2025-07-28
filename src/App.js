@@ -6,6 +6,8 @@ import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./themes";
 import { ThemeProviderWrapper, useTheme } from "./contexts/themeContext";
 import Toggle from "./components/Toggle";
+import Skills from "./components/Skills";
+import Contact from "./components/Contact";
 
 function ThemedApp() {
   const { isDark } = useTheme();
@@ -25,7 +27,14 @@ function ThemedApp() {
         <Toggle />
         <Hero />
         <Projects />
+        <Skills skills={[
+          { name: "React", level: 90 },
+          { name: "JavaScript", level: 85 },
+          { name: "CSS", level: 80 },
+          { name: "Node.js", level: 75 },
+        ]} />
         <Timeline />
+        <Contact />
       </div>
     </ThemeProvider>
   );
