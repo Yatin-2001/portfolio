@@ -116,12 +116,12 @@ const Tooltip = styled.span`
 `;
 
 const tools = [
-  { name: "Langchain", angle: -100, info: "AI framework for agentic Chatbot development" },
-  { name: "Kafka", angle: -60, info: "Stream messaging system" },
-  { name: "CQRS", angle: -20, info: "Command‑Query pattern" },
-  { name: "SAGA", angle: 20, info: "Distributed transaction pattern" },
-  { name: "EC2", angle: 60, info: "AWS compute instances" },
-  { name: "ELK", angle: 100, info: "Logs & metrics stack" },
+  { name: "Langchain", angle: -60, info: "AI framework for agentic Chatbot development" },
+  { name: "SAGA", angle: -30, info: "Distributed transaction pattern" },
+  { name: "CQRS", angle: 0, info: "Command‑Query Segregation" },
+  { name: "Kafka", angle: 30, info: "Messaging system" },
+  { name: "AWS", angle: 60, info: "EC2, S3, Lambda" },
+  
 ];
 
 export default function Hero() {
@@ -172,7 +172,7 @@ export default function Hero() {
         <OrbitCenter>
           {tools.map((tool, i) => {
             const rad = (tool.angle * Math.PI) / 180;
-            const r = 220; // adjust this for 60vh if needed
+            const r = 240; // adjust this for 60vh if needed
             const x = Math.cos(rad) * r;
             const y = Math.sin(rad) * r;
 

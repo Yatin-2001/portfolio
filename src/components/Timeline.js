@@ -24,7 +24,7 @@ export default function Timeline() {
   const Entry = styled(motion.div)`
     position: relative;
     width: 50%;
-    padding: 1rem;
+    
     text-align: ${(props) => (props.left ? "right" : "left")};
     align-self: flex-start;
   `;
@@ -37,7 +37,7 @@ export default function Timeline() {
   return (
     <Section style={{ background: theme.background, flexDirection: "column", position: "relative" }}>
       <Subheading style={{ color: theme.title, marginBottom: "2rem" }}>Timeline</Subheading>
-      <div style={{ display: "flex", flexDirection: "column", gap: "2rem", position: "relative" }}>
+      <div style={{ display: "flex", flexDirection: "column", position: "relative" }}>
         <Line />
         {timeline.map((item, index) => (
           <Entry

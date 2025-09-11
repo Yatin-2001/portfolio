@@ -27,12 +27,7 @@ function ThemedApp() {
         <Toggle />
         <Hero />
         <Projects />
-        <Skills skills={[
-          { name: "React", level: 90 },
-          { name: "JavaScript", level: 85 },
-          { name: "CSS", level: 80 },
-          { name: "Node.js", level: 75 },
-        ]} />
+        <Skills />
         <Timeline />
         <Contact />
       </div>

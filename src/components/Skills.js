@@ -3,6 +3,7 @@ import { lightTheme, darkTheme } from '../themes';
 import React from "react";
 import styled from "styled-components";
 import ProgressBar from "@ramonak/react-progress-bar";
+import { skills } from "../data/skills";
 
 const SectionWrapper = styled.section`
   height: 100vh;
@@ -25,7 +26,7 @@ const SkillGrid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
 `;
 
 const SkillCard = styled.div`
@@ -35,14 +36,14 @@ const SkillCard = styled.div`
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 `;
 
-export default function Skills({ skills }) {
+export default function Skills() {
     const { isDark } = useTheme();
     var theme = isDark ? darkTheme : lightTheme;
 
     return (
         <SectionWrapper>
             <Title>Skills</Title>
-            <SkillGrid>
+            <SkillGrid style={{marginTop: "2rem"}}>
                 {skills.map(skill => (
                     <SkillCard key={skill.name}>
                         <h3 style={{ marginBottom: "0.5rem", color: theme.text }}>{skill.name}</h3>
@@ -54,7 +55,7 @@ export default function Skills({ skills }) {
                             isLabelVisible={false}
                             baseBgColor={theme.cardHover}
                         />
-                        <span style={{ marginTop: "0.5rem", fontSize: "0.9rem", color: theme.text }}>
+                        <span style={{fontSize: "0.9rem", color: theme.text }}>
                             {skill.level}%
                         </span>
                     </SkillCard>

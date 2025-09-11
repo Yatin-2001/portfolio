@@ -94,6 +94,34 @@ export default function Projects() {
         transform: scale(1.05);
       }
     }
+
+    /* Description scroll styling */
+    .desc {
+      height: 100px;
+      overflow-y: auto;
+      padding-right: 0.5rem;
+
+      scrollbar-width: thin; /* Firefox */
+      scrollbar-color: transparent transparent;
+    }
+
+    .desc:hover {
+      scrollbar-color: ${({ theme }) => theme.primary} transparent; /* Firefox shows scrollbar only on hover */
+    }
+
+    .desc::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .desc::-webkit-scrollbar-thumb {
+      background: transparent;
+      border-radius: 3px;
+    }
+
+    .desc:hover::-webkit-scrollbar-thumb {
+      background: ${({ theme }) => theme.primary};
+    }
+
   `;
 
 
@@ -108,7 +136,7 @@ export default function Projects() {
     <Section style={{ background: theme.background }}>
       <div style={{ width: "100%", height: "100%", display: "grid", placeItems: "center" }}>
         <div style={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
-          <Subheading style={{ color: theme.title, marginBottom: "2rem" }}>Projects</Subheading>
+          <Subheading style={{ color: theme.title, marginBottom: "2rem" }}>Personal Projects</Subheading>
         </div>
         <div style={{ width: "100%", height: "100%" }}>
           <Grid>
@@ -127,7 +155,9 @@ export default function Projects() {
                 </div>
                 <div style={{ padding: "1rem" }}>
                   <h3>{project.title}</h3>
-                  <p>{project.description}</p>
+                  <div className="desc">
+                    <p>{project.description}</p>
+                  </div>
                   {project.github && (
                     <button
                       className="github-button"
@@ -136,7 +166,16 @@ export default function Projects() {
                       View Code
                     </button>
                   )}
+                  {project.paper && (
+                    <button
+                      className="github-button"
+                      onClick={() => window.open(project.paper, "_blank")}
+                    >
+                      Link to Paper
+                    </button>
+                  )}
                 </div>
+
               </Card>
 
             ))}
