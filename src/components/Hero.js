@@ -145,7 +145,7 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.3, duration: 1 }}
         >
-          Full‑Stack MERN Developer | AI/ML Enthusiast
+          Full‑Stack Developer | AI/ML Enthusiast
         </Subtitle>
         <Summary
           initial={{ opacity: 0, y: 20 }}
