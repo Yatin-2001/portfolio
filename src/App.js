@@ -1,6 +1,7 @@
 import "./App.css";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
+import Certificates from "./components/Certificates";
 import Timeline from "./components/Timeline";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./themes";
@@ -28,6 +29,7 @@ function ThemedApp() {
         <Hero />
         <Projects />
         <Skills />
+        <Certificates />
         <Timeline />
         <Contact />
       </div>
