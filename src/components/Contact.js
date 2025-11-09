@@ -86,8 +86,8 @@ export default function Contact() {
     <SectionWrapper>
       <Title>Contact Me</Title>
       <SocialRow>
-        <a href="#" target="_blank" rel="noreferrer"><FaLinkedin /></a>
-        <a href="#" target="_blank" rel="noreferrer"><FaGithub /></a>
+        <a href="https://www.linkedin.com/in/yatin-gupta-5376461a0" target="_blank" rel="noreferrer"><FaLinkedin /></a>
+        <a href="https://github.com/Yatin-2001" target="_blank" rel="noreferrer"><FaGithub /></a>
         <a href="#" target="_blank" rel="noreferrer"><FaEnvelope /></a>
       </SocialRow>
       <Form onSubmit={e => e.preventDefault()}>

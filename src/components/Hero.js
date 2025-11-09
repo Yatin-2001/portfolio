@@ -152,7 +152,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 1 }}
         >
-          Have 2+ Years of experience in working with tools like Kafka, EC2, ELK stack and implementing design patterns like CQRS and SAGA pattern and building scalable micro-service architecture.
+          Have 3+ Years of experience in working with tools like Kafka, EC2, ELK stack and implementing design patterns like CQRS and SAGA pattern and building scalable micro-service architecture.
           Also have experience working with AI/ML implemeting many tools and integrating agentic chatbots and workflows into applications.
         </Summary>
       </TextCol>
