@@ -39,7 +39,7 @@ export const projects = [
     description:
       "A Spring Boot microservices application designed with event drive design using Kafka & JWT, simulating Core Banking Service(CBS) of a Banking application. Services for ledger, user (KYC), accounting, API gateway via Feign. Learning project with event-driven design.",
     image: `images/payment_app.jpg`,
-    github: "https://github.com/your-repo-payu",
+    github: "https://github.com/Yatin-2001/PayU",
     tools: ["Spring Boot", "Kafka", "JWT", "Feign", "REST API"]
   },
   {
